@@ -27,6 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({ secret: "Library" }));
+
 require('./src/config/passport.js')(app);
 
 app.use(express.static(path.join(__dirname, "public")));
